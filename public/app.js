@@ -35,7 +35,7 @@ function ticTacToe(btn, index) {
     if (cells[index] === '' && !checkWin() && !checkDraw()) {
         cells[index] = currentPlayer;
         btn.textContent = currentPlayer;
-        btn.dis
+        btn.disabled = true;
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         const winner = checkWin();
         if (winner) {
@@ -43,14 +43,34 @@ function ticTacToe(btn, index) {
         } else if (checkDraw()) {
             result.textContent = "It's a draw!";
         }
-        else{
-            result.textContent='Player ${currentPlayer} Turn';
+        else {
+            result.textContent = 'Player ${currentPlayer} Turn';
         }
     }
 }
 
+function ticTacToe(btn, index) {
+    if (cells[index] === '' && !checkWin() && !checkDraw()) {
+        cells[index] = currentPlayer;
+        btn.textContent = currentPlayer;
+        btn.disabled = true;
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        const winner = checkWin();
+        if (winner) {
+            result.textContent = 'Player ${winner} wins!';
+        } else if (checkDraw()) {
+            result.textContent = "It's a draw!";
+        }
+        else {
+            result.textContent = 'Player ${currentPlayer} Turn';
+        }
+    }
+}
+
+
 // Event listeners for each button
 btns.forEach((btn, index) => {
+    
     btn.addEventListener('click', () => ticTacToe(btn, index));
 });
 
