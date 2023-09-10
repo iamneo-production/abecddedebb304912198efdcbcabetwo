@@ -66,9 +66,11 @@ header {
   max-width: 200px;
   margin: 0 auto;
   text-align: center;
+
 }
-/*Result Styling: */
-.result-section{
+/*Reset Styling: */
+.reset-section{
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -80,9 +82,7 @@ header {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.reset-section{
-  text-align: center;
-}
+
 
 /*Reset button hover*/
 

@@ -35,17 +35,19 @@ function ticTacToe(btn, index) {
     if (cells[index] === '' && !checkWin() && !checkDraw()) {
         cells[index] = currentPlayer;
         btn.textContent = currentPlayer;
-        btn.disabled = true;
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+
+        // Update the text content of the cell (box)
+        document.getElementsByClassName("box")[index].innerText = currentPlayer;
+
         const winner = checkWin();
         if (winner) {
-            result.textContent = 'Player ${winner} wins!';
+            result.textContent = `Player ${winner} wins!`;
         } else if (checkDraw()) {
             result.textContent = "It's a draw!";
-        }
-        else {
-            result.textContent = 'Player ${currentPlayer} Turn';
-        }
+        } else {
+    result.textContent = 'Player ${currentPlayer} Turn';
+}
     }
 }
 
