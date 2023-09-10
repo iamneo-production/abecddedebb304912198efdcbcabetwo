@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
         for (const combination of winCombinations) {
             const [a, b, c] = combination;
             if (
-                cells[a].value &&
-                cells[a].value === cells[b].value &&
-                cells[a].value === cells[c].value
+                cells[a].textContent &&
+                cells[a].textContent === cells[b].textContent &&
+                cells[a].textContent === cells[c].textContent
             ) {
-                return cells[a].value;
+                return cells[a].textContent;
             }
         }
 
@@ -34,20 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to check for a draw
     function checkDraw() {
-        return [...cells].every((cell) => cell.value !== "");
+        return [...cells].every((cell) => cell.textContent !== "");
     }
 
     // Function to handle a player's move
-    // Function to handle a player's move
     function handleMove(cell) {
-        if (!gameOver && cell.value === "") {
-            cell.value = currentPlayer;
-            cell.readOnly = true;
-            currentPlayer = currentPlayer === "X" ? "O" : "X";
-
-            // Update the text content of the clicked cell with the current player's symbol
-            cell.innerText = currentPlayer;
-
+        if (!gameOver && cell.textContent === "") {
+            cell.textContent = currentPlayer;
             const winner = checkWin();
             if (winner) {
                 resultContainer.textContent = `Player ${winner} wins!`;
@@ -58,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 gameOver = true;
                 resetButton.disabled = false;
             } else {
+                currentPlayer = currentPlayer === "X" ? "O" : "X";
                 resultContainer.textContent = `Current Player: ${currentPlayer}`;
             }
         }
     }
-
 
     // Add event listeners to the cells for handling player moves
     cells.forEach((cell) => {
@@ -72,8 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Reset the game
     resetButton.addEventListener("click", () => {
         cells.forEach((cell) => {
-            cell.value = "";
-            cell.readOnly = false;
+            cell.textContent = "";
         });
         currentPlayer = "X";
         resultContainer.textContent = "Current Player: X";
