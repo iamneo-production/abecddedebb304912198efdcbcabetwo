@@ -38,12 +38,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Function to handle a player's move
+    // Function to handle a player's move
     function handleMove(cell) {
         if (!gameOver && cell.value === "") {
             cell.value = currentPlayer;
             cell.readOnly = true;
             currentPlayer = currentPlayer === "X" ? "O" : "X";
-            document.getElementsByClassName("box")[index].innerText = currentPlayer;
+
+            // Update the text content of the clicked cell with the current player's symbol
+            cell.innerText = currentPlayer;
+
             const winner = checkWin();
             if (winner) {
                 resultContainer.textContent = `Player ${winner} wins!`;
@@ -58,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+
 
     // Add event listeners to the cells for handling player moves
     cells.forEach((cell) => {
@@ -76,4 +81,3 @@ document.addEventListener("DOMContentLoaded", function () {
         resetButton.disabled = true;
     });
 });
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
