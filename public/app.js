@@ -25,6 +25,14 @@ const ticTacToe = (element, index) => {
     2. Display a winning message in the 'result' element when a player wins.
     3. Disable all buttons after a win.
     */
+    for (let condition of conditions) {
+            const [a, b, c] = condition;
+            if (cells[a] !== '' && cells[a] === cells[b] && cells[a] === cells[c]) {
+                return cells[a];
+            }
+        }
+    return null;
+    
 
     // Your code to update the game state and check for a win
     // ...
