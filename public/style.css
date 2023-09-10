@@ -8,8 +8,6 @@ body {
   font-family: "Radio Canada", sans-serif;
 }
 
-/* CSS for Tic-Tac-Toe game */
-/* Header Styling */
 header {
   text-align: center;
   color: #ffffff;
@@ -19,22 +17,16 @@ header {
   /* Subtle text shadow */
 }
 
-/* Box Styling */
-.board {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 35px;
-}
-
-/* Row Styling */
 .row {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Button Styling */
+.board {
+  margin-bottom: 20px;
+}
+
 .btn {
   border: 1px solid #000;
   border-radius: 10px;
@@ -44,41 +36,42 @@ header {
   font-weight: 500;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
-  color: #333;
+  color: #000;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   transition: background-color 0.3s ease, cursor 0.3s ease;
 }
-/*Button Hover Styling*/
-.btn:hover{
+
+.btn:hover {
   background-color: rgba(255, 255, 255, 0.9);
-  cursor:pointer;
+  cursor: pointer;
 }
-/*Disable Button Styling*/
-.btn:disabled{
+
+.btn:disabled {
   color: #777;
   cursor: not-allowed;
 }
-/*Result Container*/
-.result-container{
+
+.result-container {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #000;
   max-width: 200px;
   margin: 0 auto;
   text-align: center;
-  height: 40px;
 }
-.result{
+
+.result {
   font-size: 25px;
 }
+
 /*Reset Styling: */
-.reset-section{
+.reset-section {
   margin-top: 20px;
   text-align: center;
 }
 
 /*Reset Button Styling*/
-#reset{
+#reset {
   border: 1px solid #000;
   background-color: #ffffff;
   color: #000;
@@ -86,10 +79,9 @@ header {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 /*Reset button hover*/
 
-#reset:hover{
+#reset:hover {
   background-color: #ffffff;
   columns: #000;
 }
