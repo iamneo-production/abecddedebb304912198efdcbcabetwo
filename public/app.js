@@ -38,7 +38,7 @@ function ticTacToe(btn, index) {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
 
         // Update the text content of the cell (box)
-        document.getElementsByClassName("box")[index].innerText = currentPlayer;
+        document.getElementsByClassName("btn")[index].innerText = currentPlayer;
 
         const winner = checkWin();
         if (winner) {

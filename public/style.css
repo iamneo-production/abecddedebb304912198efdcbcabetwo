@@ -66,7 +66,10 @@ header {
   max-width: 200px;
   margin: 0 auto;
   text-align: center;
-
+  height: 40px;
+}
+.result{
+  font-size: 25px;
 }
 /*Reset Styling: */
 .reset-section{
