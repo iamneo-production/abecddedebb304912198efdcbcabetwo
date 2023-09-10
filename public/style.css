@@ -56,7 +56,7 @@ header {
 }
 /*Disable Button Styling*/
 .btn:disabled{
-  color: #000;
+  color: #777;
   cursor: not-allowed;
 }
 /*Result Container*/
@@ -75,10 +75,13 @@ header {
 /*Reset Button Styling*/
 #reset{
   border: 1px solid #000;
-  background-color: #000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+.reset-section{
+  text-align: center;
 }
 
 /*Reset button hover*/

@@ -70,8 +70,8 @@ function ticTacToe(btn, index) {
 
 // Event listeners for each button
 btns.forEach((btn, index) => {
-    
-    btn.addEventListener('click', () => ticTacToe(btn, index));
+    btn.textContent = '';
+    btn.addEventListener('click', () => move(index));
 });
 
 // Reset the game
