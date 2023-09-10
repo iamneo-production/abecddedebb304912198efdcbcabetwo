@@ -38,9 +38,12 @@ function ticTacToe(btn, index) {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         const winner = checkWin();
         if (winner) {
-            result.textContent = `Player ${winner} wins!`;
+            result.textContent = 'Player ${winner} wins!';
         } else if (checkDraw()) {
             result.textContent = "It's a draw!";
+        }
+        else{
+            result.textContent='Player ${currentPlayer} Turn';
         }
     }
 }
