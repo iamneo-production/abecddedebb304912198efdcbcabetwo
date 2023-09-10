@@ -68,3 +68,22 @@ h1 {
   text-align: center;
 }
 /*Result Styling: */
+.result-section{
+  text-align: center;
+}
+
+/*Reset Button Styling*/
+#reset{
+  border: 1px solid #000;
+  background-color: #000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*Reset button hover*/
+
+#reset:hover{
+  background-color: #ffffff;
+  columns: #000;
+}
