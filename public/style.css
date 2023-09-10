@@ -9,8 +9,6 @@ body {
 }
 
 /* CSS for Tic-Tac-Toe game */
-<style>
-
 /* Header Styling */
 h1 {
   text-align: center;
@@ -46,42 +44,27 @@ h1 {
   font-weight: 500;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
-  /* Slightly transparent white */
   color: #333;
-  /* Darker text color */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  /* Light text shadow */
   cursor: pointer;
   transition: background-color 0.3s ease, cursor 0.3s ease;
 }
-
-eight: bold;
-border: 2px solid #333;
-cursor: pointer;
-display: inline-flex;
-justify-content: center;
-align-items: center;
-margin: 5px;
-background-color: #f0f0f0;
-transition: background-color 0.3s ease,
-transform 0.2s ease;
+/*Button Hover Styling*/
+.btn:hover{
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor:pointer;
 }
-
-.btn:hover {
-  background-color: #9e9090;
-  transform: scale(1.05);
+/*Disable Button Styling*/
+.btn:disabled{
+  color: #000;
+  cursor: not-allowed;
 }
-
-#reset {
-  font-size: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  margin-top: 20px;
+/*Result Container*/
+.result-container{
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #000;
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: center;
 }
-
-#reset:hover {
-  background-color: #555;
-}
+/*Result Styling: */
