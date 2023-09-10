@@ -10,7 +10,7 @@ body {
 
 /* CSS for Tic-Tac-Toe game */
 /* Header Styling */
-h1 {
+header {
   text-align: center;
   color: #ffffff;
   /* Bright white color */

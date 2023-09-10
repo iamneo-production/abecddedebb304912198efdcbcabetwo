@@ -35,6 +35,7 @@ function ticTacToe(btn, index) {
     if (cells[index] === '' && !checkWin() && !checkDraw()) {
         cells[index] = currentPlayer;
         btn.textContent = currentPlayer;
+        btn.dis
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         const winner = checkWin();
         if (winner) {
